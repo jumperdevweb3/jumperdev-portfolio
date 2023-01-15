@@ -14,8 +14,19 @@ module.exports = {
         "m-purple": "#C778DD",
         "m-gray": "#ABB2BF",
       },
+      backgroundImage: {
+        "m-gradient": "linear-gradient(to right,#0ea5e9,#a855f7,#8b07b0eb)",
+      },
       fontFamily: {
-        "fira-code": "Fira Code, monospace",
+        fira: "Fira Code, monospace",
+        inter: "Inter, sans-serif",
+      },
+      boxShadow: {
+        "m-box-shadow":
+          "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
+      },
+      boxShadowColor: {
+        "m-shadow-orange": "rgb(144,93,54,0.44)",
       },
       keyframes: {
         wiggle: {
@@ -29,10 +40,26 @@ module.exports = {
           "75%": { transform: "translateX(-25%)" },
           "100%": { transform: "translateX(1)" },
         },
+        levitation: {
+          "0%": { transform: "translateY(0%)" },
+          "50%": { transform: "translateY(7%)" },
+          "100%": { transform: "translateY(0%)" },
+        },
+        fromLeft: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+        fromRight: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
       },
       animation: {
         wiggle: "wiggle 2s ease-in-out infinite",
         wave: "wave 10s -3s linear reverse infinite",
+        levitation: "levitation 5s 1500ms linear reverse infinite",
+        fromLeft: "fromLeft 1s linear",
+        fromRight: "fromRight 1s linear",
       },
     },
   },
