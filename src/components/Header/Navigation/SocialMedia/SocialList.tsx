@@ -12,7 +12,7 @@ export const SocialList = () => {
     {
       id: 0,
       icon: <BsGithub {...iconConfig} />,
-      url: "https://github.com/jumperDev",
+      url: "https://github.com/jumperdevweb3",
     },
     {
       id: 1,

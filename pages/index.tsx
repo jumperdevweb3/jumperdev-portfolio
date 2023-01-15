@@ -1,7 +1,7 @@
-import { Header } from "@/Header/Header";
+import { Home } from "@/Home/Home";
 import Head from "next/head";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Head>
@@ -10,7 +10,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Home />
+      <div className="h-screen w-full bg-sky-600"></div>
     </>
   );
 }

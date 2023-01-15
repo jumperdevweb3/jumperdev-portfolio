@@ -7,13 +7,12 @@ export const Navigation = ({ onCloseNav }: { onCloseNav: () => void }) => {
       <ul className="flex flex-col gap-12 text-lg md:flex-row">
         {navLinks.map((item) => {
           return (
-            <li
-              key={item.id}
-              className={`text-[2rem] lowercase text-m-gray hover:text-white  md:text-[1.2rem]`}
-              onClick={onCloseNav}
-            >
-              <Link href={item.url}>
-                <span className="text-m-purple">#</span>
+            <li key={item.id} className={``} onClick={onCloseNav}>
+              <Link
+                href={item.url}
+                className="text-[2rem] lowercase text-m-gray transition-all  hover:text-white md:text-[1.2rem] md:hover:tracking-wider"
+              >
+                <span className="text-m-purple ">#</span>
                 {item.name}
               </Link>
             </li>
