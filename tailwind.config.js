@@ -26,7 +26,7 @@ module.exports = {
           "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
       },
       boxShadowColor: {
-        "m-shadow-orange": "rgb(144,93,54,0.44)",
+        "m-shadow-orange": "rgba(112, 27, 193, 0.65)",
       },
       keyframes: {
         wiggle: {
@@ -59,7 +59,7 @@ module.exports = {
         wave: "wave 10s -3s linear reverse infinite",
         levitation: "levitation 5s 1500ms linear reverse infinite",
         fromLeft: "fromLeft 1s linear",
-        fromRight: "fromRight 1s linear",
+        fromRight: "fromRight 800ms linear",
       },
     },
   },
