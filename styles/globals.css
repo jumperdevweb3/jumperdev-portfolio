@@ -19,6 +19,7 @@ body {
   color: #fff;
   overflow-x: hidden;
   max-width: 100%;
+  position: relative;
 }
 
 a {
