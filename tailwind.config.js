@@ -16,6 +16,9 @@ module.exports = {
       },
       backgroundImage: {
         "m-gradient": "linear-gradient(to right,#0ea5e9,#a855f7,#8b07b0eb)",
+        "test-1": "linear-gradient(to right, #8e2de2, #4a00e0)",
+        "test-2": "linear-gradient(to right, #7f00ff, #e100ff)",
+        "test-3": "linear-gradient(to right, #9d50bb, #6e48aa)",
       },
       fontFamily: {
         fira: "Fira Code, monospace",
@@ -28,6 +31,7 @@ module.exports = {
       boxShadowColor: {
         "m-shadow-purple": "rgba(112, 27, 193, 0.65)",
         "m-shadow-hover": "rgba(133, 5, 255, 0.79)",
+        "m-shadow-pink": "rgba(186, 19, 220, 0.83)",
       },
       keyframes: {
         wiggle: {
@@ -61,6 +65,7 @@ module.exports = {
         levitation: "levitation 5s 1500ms linear reverse infinite",
         fromLeft: "fromLeft 1s linear",
         fromRight: "fromRight 700ms linear",
+        gradient: "gradient 10s linear infinite",
       },
     },
   },

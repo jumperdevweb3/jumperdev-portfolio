@@ -12,11 +12,11 @@ export const HomeBannerAvatar = () => {
     avatarRef.current?.classList.remove("translate-x-full");
   }, []);
   return (
-    <div ref={avatarRef} className="translate-x-full">
+    <div ref={avatarRef} className="min-h-[400px] translate-x-full">
       <div className="flex animate-levitation flex-col gap-6">
         <Image
-          src={"/avatar.png"}
-          className="duration-400 h-[300px] w-[300px] rounded-[50%] shadow-m-box-shadow shadow-m-shadow-purple transition-all hover:shadow-m-shadow-hover"
+          src={"/cuted-memoji.png"}
+          className="duration-400 h-[300px] w-[300px] rounded-[50%] bg-test-2 object-contain shadow-m-box-shadow shadow-m-shadow-pink transition-all hover:shadow-m-shadow-hover xl:h-[450px] xl:w-[450px]"
           width={300}
           height={300}
           alt="avatar image"

@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { SpringTrail } from "@/ui/Animations/SpringTrail";
 import { TypeAnimation } from "react-type-animation";
+import { useWindowSize } from "src/hooks/use-windowSize";
 export const HomeBannerContent = () => {
   const [open, setOpen] = useState(false);
-
+  const { width } = useWindowSize();
+  const mobile = width <= 420;
   useEffect(() => {
     setOpen(true);
   }, []);
@@ -43,9 +45,18 @@ export const HomeBannerContent = () => {
         <p>I build web things</p>
         <p>
           ...and i love{" "}
-          <span className="inline-block min-w-[290px] bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-[transparent]">
-            {open && TextAnimation}
-          </span>
+          {!mobile && (
+            <span className="inline-block min-w-[240px] bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-left text-[transparent] lg:min-w-[290px]">
+              {open && TextAnimation}
+            </span>
+          )}
+        </p>
+        <p>
+          {mobile && (
+            <span className="inline-block min-w-[240px] bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-center text-[transparent] ">
+              {open && TextAnimation}
+            </span>
+          )}
         </p>
       </SpringTrail>
     </div>
