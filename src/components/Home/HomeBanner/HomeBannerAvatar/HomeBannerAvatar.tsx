@@ -16,7 +16,7 @@ export const HomeBannerAvatar = () => {
       <div className="flex animate-levitation flex-col gap-6">
         <Image
           src={"/avatar.png"}
-          className="h-[300px] w-[300px] rounded-[50%] shadow-m-box-shadow shadow-m-shadow-orange"
+          className="duration-400 h-[300px] w-[300px] rounded-[50%] shadow-m-box-shadow shadow-m-shadow-purple transition-all hover:shadow-m-shadow-hover"
           width={300}
           height={300}
           alt="avatar image"
