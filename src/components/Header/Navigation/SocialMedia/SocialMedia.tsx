@@ -1,4 +1,4 @@
-import { AnimatedWaves } from "@/ui/AnimatedWaves";
+import { AnimatedWaves } from "@/ui/Animations/AnimatedWaves";
 import { SocialList } from "./SocialList";
 
 export const SocialMedia = () => {
