@@ -11,7 +11,6 @@ export default function HomePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Home />
-      {/* <div className="h-screen w-full bg-sky-600"></div> */}
     </>
   );
 }
