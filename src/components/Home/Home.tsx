@@ -1,11 +1,13 @@
+import { Experience } from "./Experience/Experience";
 import { HomeBanner } from "./HomeBanner/HomeBanner";
-import { LandingPage } from "./LandingPage/LandingPage";
+import { ScrollSection } from "./ScrollSection/ScrollSection";
 
 export const Home = () => {
   return (
     <>
       <HomeBanner />
-      <LandingPage />
+      <ScrollSection />
+      <Experience />
     </>
   );
 };
