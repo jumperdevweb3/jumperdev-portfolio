@@ -4,6 +4,28 @@ import { useRef } from "react";
 export const Experience = () => {
   const breakPointRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(breakPointRef, { once: false });
+
+  const coursesList = [
+    {
+      id: 1,
+      title: "React",
+      subTitle: "The Complete Guide (incl Hooks, React Router, Redux)",
+      author: "Maximilian Schwarzmüller",
+    },
+    {
+      id: 2,
+      title: "Next.js",
+      subTitle: "The Complete Guide (incl. Two Paths!)",
+      author: "Maximilian Schwarzmüller",
+    },
+    {
+      id: 3,
+      title: "Understanding TypeScript ",
+      subTitle: "2022 Edition",
+      author: "Maximilian Schwarzmüller",
+    },
+  ];
+
   return (
     <div
       className={
@@ -47,29 +69,25 @@ export const Experience = () => {
         }}
       >
         <h2 className="text-center">
-          Courses i have <span className="text-red-300">complete</span>
+          Courses I have <span className="text-green-500">completed</span>
         </h2>
         <div className="flex flex-col gap-4 text-left text-lg">
-          <p>
-            · <span className="text-blue-500">React</span> - The Complete Guide
-            (incl Hooks, React Router, Redux)
-          </p>
-          <p>
-            ·{" "}
-            <span className="bg-test-next bg-clip-text text-transparent">
-              Next.js
-            </span>{" "}
-            & <span className="text-blue-500">React</span> - The Complete Guide
-            (incl. Two Paths!)
-          </p>
-          <p>
-            · <span className="text-blue-400">Understanding TypeScript</span> -
-            2022 Edition
-          </p>
+          {coursesList.map((item) => (
+            <p
+              key={item.id}
+              className="flex items-center gap-2 text-left text-lg"
+            >
+              <span className="text-4xl">·</span>{" "}
+              <span className="text-blue-500">{item.title}</span> -{" "}
+              {item.subTitle}
+              {" - "}
+              <span className="text-cyan-600">{item.author}</span>
+            </p>
+          ))}
         </div>
       </div>
       <div
-        className="absolute bottom-[20%] left-0 h-2 w-full"
+        className="absolute top-[10%] left-0 h-2 w-full"
         ref={breakPointRef}
       ></div>
     </div>
