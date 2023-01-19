@@ -31,7 +31,7 @@ export const ScrollSection = () => {
           <div
             ref={promoSquareRef}
             key={index}
-            className="before: grid h-[40vh] w-[700px] max-w-[80vw] skew-y-[0deg] animate-cardSkew place-items-center rounded-xl border-[3px] border-solid border-[#bbb] bg-test-dark-purple bg-cover bg-no-repeat shadow-m-box-shadow shadow-m-shadow-card"
+            className="before: grid h-[40vh] w-[700px] max-w-[80vw] skew-y-[0deg] animate-cardSkew place-items-center rounded-xl border-[3px] border-solid border-[#bbb] bg-cards-dark-purple bg-cover bg-no-repeat shadow-own-shadow shadow-scrolledItems"
           >
             <p className="text-center text-2xl font-bold md:text-5xl ">
               {text}

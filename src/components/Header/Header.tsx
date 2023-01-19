@@ -32,7 +32,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 left-0 z-50 flex w-[100%] flex-col items-center overflow-x-hidden bg-m-bg font-fira md:flex-row md:justify-between md:px-8 ${
+      className={`sticky top-0 left-0 z-50 flex w-[100%] flex-col items-center overflow-x-hidden bg-main-dark font-fira md:flex-row md:justify-between md:px-8 ${
         isNavOpen && !desktop && "h-screen"
       }`}
     >
@@ -42,7 +42,7 @@ export const Header = () => {
         isNavOpen={isNavOpen}
       />
       <div
-        className={`absolute top-[60px] z-0 flex h-[calc(calc(var(--vh)_*_100)_-_60px)] w-full flex-col justify-between bg-m-bg transition-all duration-300 ${navPosition} md:static md:h-auto md:w-auto`}
+        className={`bg-m-bg absolute top-[60px] z-0 flex h-[calc(calc(var(--vh)_*_100)_-_60px)] w-full flex-col justify-between transition-all duration-300 ${navPosition} md:static md:h-auto md:w-auto`}
       >
         <Navigation onCloseNav={closeNavHandler} />
         {!desktop && <SocialMedia />}

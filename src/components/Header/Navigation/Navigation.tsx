@@ -12,7 +12,7 @@ export const Navigation = ({ onCloseNav }: { onCloseNav: () => void }) => {
                 href={item.url}
                 className="text-[2rem] lowercase text-m-gray transition-all  hover:text-white md:text-[1.2rem] md:hover:tracking-wider"
               >
-                <span className="text-m-purple ">#</span>
+                <span className="text-c-purple ">#</span>
                 {item.name}
               </Link>
             </li>

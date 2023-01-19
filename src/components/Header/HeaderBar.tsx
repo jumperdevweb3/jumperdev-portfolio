@@ -26,7 +26,7 @@ export const HeaderBar = ({ onClose, onToggle, isNavOpen }: IProps) => {
           {" "}
           Jumper
           <span
-            className={`text-xl text-m-purple ${
+            className={`text-xl text-c-purple ${
               isNavOpen && "animate-bounce"
             } inline-block`}
           >
