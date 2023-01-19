@@ -20,6 +20,7 @@ export const HomeBannerAvatar = () => {
           width={300}
           height={300}
           alt="avatar image"
+          priority
         ></Image>
         {desktop && (
           <div className="flex w-full skew-y-[10deg] justify-between gap-6">
