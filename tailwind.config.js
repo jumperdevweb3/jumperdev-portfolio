@@ -6,14 +6,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        cards: "repeat(auto-fill, 250px)",
+      },
       dropShadow: {
         "4xl": [
           "0 15px 35px rgb(192 12 237 / 73%)",
           "0 45px 65px rgb(98 7 241 / 75%)",
         ],
         "5xl": [
-          "0 15px 35px rgb(192 12 237 / 73%)",
-          "0 45px 65px rgb(98 7 241 / 75%)",
+          "0 15px 35px rgb(12 92 237 / 73%)",
+          "0 45px 65px rgb(7 91 241 / 75%)",
         ],
       },
       backgroundColor: {
@@ -30,6 +33,7 @@ module.exports = {
           "linear-gradient(to top, #0a0a0a, #2f0743, #0a0a0a)",
         "cards-dark-blue":
           "linear-gradient(45deg, #0a0a0a, #14223ac9, #0a0a0a)",
+        "cards-dark-red": "linear-gradient(45deg, #0a0a0a, #3a141bc9, #0a0a0a)",
       },
       fontFamily: {
         fira: "Fira Code, monospace",
@@ -45,6 +49,7 @@ module.exports = {
         "shadow-pink": "rgba(186, 19, 220, 0.83)",
         scrolledItems: "rgba(96, 5, 106, 0.84)",
         "shadow-blue": "rgb(36 105 237 / 44%)",
+        "red-yt": "rgb(237 36 46 / 44%)",
       },
       keyframes: {
         wiggle: {
@@ -81,6 +86,11 @@ module.exports = {
           "50%": { transform: "skewY(10deg)" },
           "100%": { transform: "translateX(0deg)" },
         },
+        cardSkewLow: {
+          "0%": { transform: "skewY(0deg)" },
+          "50%": { transform: "skewY(6deg)" },
+          "100%": { transform: "translateX(0deg)" },
+        },
       },
       animation: {
         wiggle: "wiggle 2s ease-in-out infinite",
@@ -90,6 +100,7 @@ module.exports = {
         fromLeft: "fromLeft 1s linear",
         fromRight: "fromRight 700ms linear",
         cardSkew: "cardSkew 10s linear reverse infinite",
+        cardSkewLow: "cardSkewLow 10s linear reverse infinite",
       },
     },
   },
