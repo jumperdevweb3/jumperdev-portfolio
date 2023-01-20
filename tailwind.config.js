@@ -18,6 +18,10 @@ module.exports = {
           "0 15px 35px rgb(12 92 237 / 73%)",
           "0 45px 65px rgb(7 91 241 / 75%)",
         ],
+        "6xl": [
+          "0 15px 35px rgb(217 0 0 / 73%)",
+          "0 45px 65px rgb(231 13 13 / 75%)",
+        ],
       },
       backgroundColor: {
         "main-dark": "#100d0d",
@@ -49,7 +53,7 @@ module.exports = {
         "shadow-pink": "rgba(186, 19, 220, 0.83)",
         scrolledItems: "rgba(96, 5, 106, 0.84)",
         "shadow-blue": "rgb(36 105 237 / 44%)",
-        "red-yt": "rgb(237 36 46 / 44%)",
+        "red-yt": "rgb(191 22 31 / 44%)",
       },
       keyframes: {
         wiggle: {
