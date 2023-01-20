@@ -46,7 +46,7 @@ export const KnowledgeItemsList = ({ sectionItems, color }: IProps) => {
               </div>
               <div className="flex h-full flex-col gap-[1rem] p-2">
                 <h3 className="">{item.name}</h3>
-                <p key={item.id} className="text-xs">
+                <p key={item.id} className="font-inter text-xs font-normal">
                   {item.description}
                 </p>
               </div>
