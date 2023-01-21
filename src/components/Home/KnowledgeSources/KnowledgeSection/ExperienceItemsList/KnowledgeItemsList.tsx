@@ -17,7 +17,7 @@ export const KnowledgeItemsList = ({ sectionItems, color }: IProps) => {
   const cardColors =
     color === "red"
       ? "shadow-red-yt bg-cards-dark-red"
-      : "shadow-shadow-blue bg-cards-dark-blue";
+      : "shadow-blue bg-cards-dark-blue";
 
   return (
     <div className="mx-auto w-full max-w-[1200px]">

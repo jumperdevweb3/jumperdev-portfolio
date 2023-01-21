@@ -23,21 +23,13 @@ export const KnowledgeSources = () => {
   return (
     <section
       className={
-        "relative flex min-h-[calc(calc(var(--vh)_*_100)_-_60px)] w-full flex-col items-center gap-[5.5rem] py-10 font-poppins text-4xl font-bold"
+        "relative flex min-h-[calc(calc(var(--vh)_*_100)_-_60px)] w-full flex-col items-center gap-[5.5rem] pt-10 pb-[5rem] font-poppins text-4xl font-bold"
       }
       ref={breakPointRef}
     >
-      <div
-        className="mb-[4%] flex flex-col items-center gap-2 bg-transparent  text-center  text-[1.7rem] shadow-own-shadow  md:text-4xl lg:text-5xl"
-        // style={{
-        //   transform: isInView ? "none" : "translateX(-200px)",
-        //   opacity: isInView ? 1 : 0,
-        //   // transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
-        // }}
-      >
+      <div className="mb-[0%] flex flex-col items-center gap-2 bg-transparent text-center  text-[1.7rem]  shadow-own-shadow md:mb-[4%] md:text-4xl lg:text-5xl">
         <h2>Two years of</h2>
-        <span className="text-purple-300 ">
-          {/* shadow-shadow-pink drop-shadow-4xl */}
+        <span className="text-purple-300 shadow-c-purple text-shadow-lg">
           programming experience
         </span>
       </div>
