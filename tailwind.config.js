@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -8,6 +9,11 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         cards: "repeat(auto-fill, 250px)",
+      },
+      textShadow: {
+        sm: "0 1px 2px var(--tw-shadow-color)",
+        DEFAULT: "0 2px 4px var(--tw-shadow-color)",
+        lg: "0 8px 16px var(--tw-shadow-color)",
       },
       dropShadow: {
         "4xl": [
@@ -30,6 +36,8 @@ module.exports = {
       colors: {
         "c-purple": "#C778DD",
         "c-gray": "#ABB2BF",
+        "light-red": "rgb(212 49 49 / 45%)",
+        "light-blue": "rgb(36 105 237 / 56%)",
       },
       backgroundImage: {
         "avatar-gradient": "linear-gradient(to right, #9d50bb, #6e48aa)",
@@ -50,10 +58,10 @@ module.exports = {
       },
       boxShadowColor: {
         "avatar-hover": "rgb(223 7 115 / 79%)",
-        "shadow-pink": "rgba(186, 19, 220, 0.83)",
+        pink: "rgba(186, 19, 220, 0.83)",
         scrolledItems: "rgba(96, 5, 106, 0.84)",
-        "shadow-blue": "rgb(36 105 237 / 44%)",
-        "red-yt": "rgb(191 22 31 / 44%)",
+        blue: "rgb(36 105 237 / 44%)",
+        "red-yt": "rgb(191 22 31 / 34%)",
       },
       keyframes: {
         wiggle: {
@@ -108,5 +116,16 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 };
