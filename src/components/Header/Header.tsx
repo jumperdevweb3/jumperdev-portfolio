@@ -17,7 +17,7 @@ export const Header = () => {
     setIsNavOpen(false);
   };
 
-  const navPosition = isNavOpen ? "left-0" : "-left-full";
+  const navPosition = isNavOpen ? "translate-x-0" : "-translate-x-full";
 
   useEffect(() => {
     if (!desktop) {
@@ -31,22 +31,22 @@ export const Header = () => {
   }, [isNavOpen]);
 
   return (
-    <header
-      className={`sticky top-0 left-0 z-50 flex w-[100%] flex-col items-center overflow-x-hidden bg-main-dark font-fira md:flex-row md:justify-between md:px-8 ${
-        isNavOpen && !desktop && "h-screen"
-      }`}
-    >
-      <HeaderBar
-        onClose={closeNavHandler}
-        onToggle={openNavHandler}
-        isNavOpen={isNavOpen}
-      />
+    <>
+      <header
+        className={`sticky top-0 left-0 z-50 flex w-[100%] flex-col items-center overflow-x-hidden bg-main-dark font-fira md:flex-row md:justify-between md:px-8`}
+      >
+        <HeaderBar
+          onClose={closeNavHandler}
+          onToggle={openNavHandler}
+          isNavOpen={isNavOpen}
+        />
+      </header>
       <div
-        className={`bg-m-bg absolute top-[60px] z-0 flex h-[calc(calc(var(--vh)_*_100)_-_60px)] w-full flex-col justify-between transition-all duration-300 ${navPosition} md:static md:h-auto md:w-auto`}
+        className={`fixed top-[60px] left-0 z-0 flex h-[calc(calc(var(--vh)_*_100)_-_60px)] w-full flex-col justify-between bg-main-dark transition-all duration-300 ${navPosition}  z-[90] md:static md:h-auto md:w-auto`}
       >
         <Navigation onCloseNav={closeNavHandler} />
         {!desktop && <SocialMedia />}
       </div>
-    </header>
+    </>
   );
 };
