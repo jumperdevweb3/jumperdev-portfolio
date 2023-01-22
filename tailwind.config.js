@@ -7,13 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        "sm-mob": { raw: "(max-height: 700px) and (min-width: 250px)" },
+        "l-desktop": { raw: "(min-width: 1920px)" },
+      },
       gridTemplateColumns: {
         cards: "repeat(auto-fill, 250px)",
       },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",
         DEFAULT: "0 2px 4px var(--tw-shadow-color)",
-        lg: "0 8px 16px var(--tw-shadow-color)",
+        lg: "0 6px 16px var(--tw-shadow-color)",
       },
       dropShadow: {
         "4xl": [
@@ -46,6 +50,8 @@ module.exports = {
         "cards-dark-blue":
           "linear-gradient(45deg, #0a0a0a, #14223ac9, #0a0a0a)",
         "cards-dark-red": "linear-gradient(45deg, #0a0a0a, #3a141bc9, #0a0a0a)",
+        shadows:
+          "linear-gradient(to right,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0) 5%,rgba(0, 0, 0, 0) 95%,rgba(0, 0, 0, 1))",
       },
       fontFamily: {
         fira: "Fira Code, monospace",
