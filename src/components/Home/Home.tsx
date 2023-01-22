@@ -6,7 +6,6 @@ export const Home = () => {
   return (
     <>
       <HomeBanner />
-      {/* <div className="h-screen w-full"></div> */}
       <ScrollSection />
       <KnowledgeSources />
     </>
