@@ -13,25 +13,27 @@ export const HomeBannerContent = () => {
   const TextAnimation = (
     <TypeAnimation
       sequence={[
+        "IT",
+        2500,
         "web3",
-        3500,
-        "frontend",
         2000,
+        "frontend",
+        3000,
         "productivity",
         3000,
         "reading",
-        3000,
+        2500,
       ]}
-      cursor={true}
       wrapper="span"
       repeat={Infinity}
       speed={1}
+      cursor={false}
     />
   );
   return (
     <div
       className={
-        "flex h-auto max-h-[250px] min-h-[200px] flex-col gap-2 text-center font-inter text-4xl font-bold md:text-left lg:text-5xl"
+        "flex h-auto max-h-[250px] min-h-[200px] flex-col gap-2 text-center font-inter text-4xl font-bold md:text-left lg:text-5xl l-desktop:min-w-[750px] l-desktop:text-6xl"
       }
     >
       <SpringTrail open={open}>
@@ -51,13 +53,13 @@ export const HomeBannerContent = () => {
             </span>
           )}
         </p>
-        <p>
-          {mobile && (
+        {mobile && (
+          <p>
             <span className="inline-block min-w-[240px] bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-center text-[transparent] ">
               {open && TextAnimation}
             </span>
-          )}
-        </p>
+          </p>
+        )}
       </SpringTrail>
     </div>
   );
