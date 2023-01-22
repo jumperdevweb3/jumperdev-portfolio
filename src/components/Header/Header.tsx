@@ -40,13 +40,16 @@ export const Header = () => {
           onToggle={openNavHandler}
           isNavOpen={isNavOpen}
         />
+        {desktop && <Navigation onCloseNav={closeNavHandler} />}
       </header>
-      <div
-        className={`fixed top-[60px] left-0 z-0 flex h-[calc(calc(var(--vh)_*_100)_-_60px)] w-full flex-col justify-between bg-main-dark transition-all duration-300 ${navPosition}  z-[90] md:static md:h-auto md:w-auto`}
-      >
-        <Navigation onCloseNav={closeNavHandler} />
-        {!desktop && <SocialMedia />}
-      </div>
+      {!desktop && (
+        <div
+          className={`fixed top-[60px] left-0 z-0 flex h-[calc(calc(var(--vh)_*_100)_-_60px)] w-full flex-col justify-between bg-main-dark transition-all duration-300 ${navPosition}  z-[90] md:static md:h-auto md:w-auto`}
+        >
+          <Navigation onCloseNav={closeNavHandler} />
+          {!desktop && <SocialMedia />}
+        </div>
+      )}
     </>
   );
 };
