@@ -1,7 +1,8 @@
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 import { KnowledgeItemsList } from "./ExperienceItemsList/KnowledgeItemsList";
 
 interface IProps {
-  isInView: boolean;
   title: string;
   subTitle: string;
   sectionItems: {
@@ -15,20 +16,30 @@ interface IProps {
   color?: string;
 }
 export const KnowledgeSection = ({
-  isInView,
   sectionItems,
   color,
   title,
   subTitle,
 }: IProps) => {
-  const sectionColor = color === "red" ? "text-[#ff3a3b]" : "text-sky-600";
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { once: true });
 
+  const sectionColor = color === "red" ? "text-[#ff3a3b]" : "text-sky-600";
   const textShadowColor =
     color === "red" ? "shadow-light-red" : "shadow-light-blue ";
+
   return (
-    <div className="flex w-full flex-col items-center gap-12 px-4 ">
+    <div
+      className="mb-[1.5rem] flex w-full flex-col items-center gap-12 px-4 lg:mb-[4rem]"
+      ref={sectionRef}
+    >
       <div
         className={`flex flex-col text-center text-2xl ${textShadowColor} text-shadow-lg md:text-4xl`}
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
       >
         <h3 className="text-center ">{title}</h3>
         <span className={`${sectionColor} `}>{subTitle}</span>
