@@ -14,6 +14,7 @@ export const About = () => {
     { id: 4, text: "I am always open to new experiences 🙋‍♂️" },
     { id: 5, text: "Check out the rest below ⬇" },
   ];
+
   return (
     <section className="mt-[3rem] flex min-h-screen flex-col items-center gap-4 overflow-x-hidden px-2 text-center font-fira">
       <h2
@@ -31,8 +32,15 @@ export const About = () => {
         </span>{" "}
         <span className="text-2xl md:text-4xl">🫡</span>
       </h2>
-      <div className="flex flex-col gap-2 font-medium md:text-xl">
-        {factsArray.map((item) => {
+      <div
+        className="flex flex-col gap-2 font-medium md:text-xl"
+        style={{
+          transform: isTitleInView ? "none" : "translateX(200px)",
+          opacity: isTitleInView ? 1 : 0,
+          transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 1.1s",
+        }}
+      >
+        {/* {factsArray.map((item) => {
           const factRef = useRef<HTMLParagraphElement>(null);
           const isFactInView = useInView(factRef, { once: true });
           const direction = item.id % 2 === 0 ? "" : "-";
@@ -53,6 +61,9 @@ export const About = () => {
               {item.text}
             </p>
           );
+        })} */}
+        {factsArray.map((item) => {
+          return <p key={item.id}>{item.text}</p>;
         })}
       </div>
       <div
