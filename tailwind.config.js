@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      borderRadius: {
+        bubble: "40% 60% 70% 30% / 40% 50% 60% 50%",
+      },
       screens: {
         "sm-mob": { raw: "(max-height: 700px) and (min-width: 250px)" },
         "l-desktop": { raw: "(min-width: 1920px)" },
@@ -109,6 +112,15 @@ module.exports = {
           "50%": { transform: "skewY(6deg)" },
           "100%": { transform: "translateX(0deg)" },
         },
+        blob: {
+          "0%,100%": { borderRadius: "40% 60% 70% 30% / 40% 40% 60% 50%" },
+          " 34%": {
+            borderRadius: "70% 30% 50% 50% / 30% 30% 70% 70%",
+          },
+          "67%": {
+            borderRadius: "100% 60% 60% 100% / 100% 100% 60% 60%",
+          },
+        },
       },
       animation: {
         wiggle: "wiggle 2s ease-in-out infinite",
@@ -119,6 +131,7 @@ module.exports = {
         fromRight: "fromRight 700ms linear",
         cardSkew: "cardSkew 10s linear reverse infinite",
         cardSkewLow: "cardSkewLow 10s linear reverse infinite",
+        blob: "blob 3s linear infinite",
       },
     },
   },
