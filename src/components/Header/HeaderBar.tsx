@@ -9,7 +9,7 @@ interface IProps {
 }
 export const HeaderBar = ({ onClose, onToggle, isNavOpen }: IProps) => {
   const { width } = useWindowSize();
-  const desktop = width >= 768;
+  const mobile = width <= 767 && width !== 0;
   const hamburgerProps = {
     color: "#fefefe",
     size: 24,
@@ -34,7 +34,7 @@ export const HeaderBar = ({ onClose, onToggle, isNavOpen }: IProps) => {
           </span>
         </Link>
       </h1>
-      {!desktop && <HamburgerButton {...hamburgerProps} />}
+      {mobile && <HamburgerButton {...hamburgerProps} />}
     </div>
   );
 };
