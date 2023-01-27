@@ -17,43 +17,36 @@ export const AboutBanner = () => {
   ];
 
   return (
-    <section
-      className="flex min-h-screen flex-col items-center gap-4 overflow-x-hidden py-8 text-center font-fira"
-      ref={sectionRef}
-    >
-      <AboutBannerBackground />
-
-      <div className="flex min-h-[40vh] w-full items-center justify-around">
-        <div
-          className="flex flex-col gap-2 font-medium md:text-xl"
-          style={{
-            transform: isSectionInView ? "none" : "translateX(200px)",
-            opacity: isSectionInView ? 1 : 0,
-            transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 1.1s",
-          }}
-        >
-          {factsArray.map((item) => {
-            return <p key={item.id}>{item.text}</p>;
-          })}
-        </div>
-        <BlobAvatar />
-      </div>
-      <div
-        style={{
-          transform: isSectionInView ? "none" : "translateY(200px)",
-          opacity: isSectionInView ? 1 : 0,
-          transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 1.1s",
-        }}
+    <>
+      <section
+        className="relative flex  h-[calc(calc(var(--vh)_*_100)_-_60px)] flex-col items-center justify-center gap-4 overflow-x-hidden text-center font-fira md:justify-between"
+        ref={sectionRef}
       >
-        <Image
-          src={"/rocket.png"}
-          width={200}
-          height={300}
-          alt="rocket"
-          className="animate-levitation"
-          priority
-        />
+        <AboutBannerBackground />
+
+        <div className="flex min-h-[40vh] w-full flex-col  items-center justify-around gap-12 md:flex-row">
+          <div
+            className="flex flex-col gap-2 "
+            style={{
+              transform: isSectionInView ? "none" : "translateX(200px)",
+              opacity: isSectionInView ? 1 : 0,
+              transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 1.1s",
+            }}
+          >
+            {factsArray.map((item) => {
+              return (
+                <p key={item.id} className="text-lg font-medium md:text-xl">
+                  {item.text}
+                </p>
+              );
+            })}
+          </div>
+          <BlobAvatar />
+        </div>
+      </section>
+      <div className="relative h-[calc(calc(var(--vh)_*_100)_-_60px)] ">
+        <AboutBannerBackground reverse />
       </div>
-    </section>
+    </>
   );
 };
