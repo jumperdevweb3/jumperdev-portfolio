@@ -55,6 +55,7 @@ module.exports = {
         "cards-dark-red": "linear-gradient(45deg, #0a0a0a, #3a141bc9, #0a0a0a)",
         shadows:
           "linear-gradient(to right,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0) 5%,rgba(0, 0, 0, 0) 95%,rgba(0, 0, 0, 1))",
+        avatar: "url(/rocket.png)",
       },
       fontFamily: {
         fira: "Fira Code, monospace",

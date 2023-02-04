@@ -13,7 +13,7 @@ export const HomeBannerAvatar = () => {
   return (
     <div
       ref={avatarRef}
-      className="min-h-[400px]"
+      className="relative z-10 min-h-[400px]"
       style={{
         transform: isInView ? "none" : "translateX(200px)",
         opacity: isInView ? 1 : 0,

@@ -33,7 +33,7 @@ export const HomeBannerContent = () => {
   return (
     <div
       className={
-        "flex h-auto max-h-[250px] min-h-[200px] flex-col gap-2 text-center font-inter text-4xl font-bold md:text-left lg:text-5xl l-desktop:min-w-[750px] l-desktop:text-6xl"
+        "flex h-auto max-h-[250px] min-h-[200px] flex-col gap-2 text-center font-inter text-4xl font-bold  md:text-left lg:text-5xl l-desktop:min-w-[750px] l-desktop:text-6xl"
       }
     >
       <SpringTrail open={open}>
@@ -45,17 +45,17 @@ export const HomeBannerContent = () => {
           </span>
         </p>
         <p>I build web things</p>
-        <p>
+        <p className="flex h-[3.5rem] items-center gap-4">
           ...and i love{" "}
           {!mobile && (
-            <span className="inline-block min-w-[240px] bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-left text-[transparent] lg:min-w-[290px]">
+            <span className="inline-block h-full min-w-[240px] bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-left text-[transparent] lg:min-w-[290px]">
               {open && TextAnimation}
             </span>
           )}
         </p>
         {mobile && (
-          <p>
-            <span className="inline-block min-w-[240px] bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-center text-[transparent] ">
+          <p className="leading-12">
+            <span className="inline-block min-w-[240px] bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-center text-[transparent]">
               {open && TextAnimation}
             </span>
           </p>

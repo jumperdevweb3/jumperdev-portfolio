@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { SideScroll } from "../SideScroll/SideScroll";
+import { SideScroll } from "./SideScroll/SideScroll";
 
 export const ScrollSection = () => {
   const cardsContent = [
