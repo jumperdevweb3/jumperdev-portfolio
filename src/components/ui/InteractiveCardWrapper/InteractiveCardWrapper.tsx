@@ -2,6 +2,7 @@ import { useRef, useState, useEffect, ReactNode } from "react";
 import styled from "styled-components";
 import { motion, useSpring, useMotionValue, useTransform } from "framer-motion";
 import { interpolate } from "@popmotion/popcorn";
+import { useWindowSize } from "src/hooks/use-windowSize";
 
 const Container = styled.div`
   border-radius: 0.5rem;
@@ -53,7 +54,8 @@ export function InteractiveCardWrapper({
   const ref = useRef<HTMLDivElement>(null);
   const [hover, setHover] = useState(false);
   const [tapped, setTapped] = useState(false);
-
+  const { width: screenWidth } = useWindowSize();
+  const isMobile = screenWidth <= 1023 && screenWidth !== 0;
   const centerPoint = [width / 2, height / 2];
   const xy = useMotionValue(centerPoint);
 
@@ -115,40 +117,48 @@ export function InteractiveCardWrapper({
   }, [hover, xy, centerPoint]);
 
   return (
-    <Container ref={ref} style={{ height: `${height}px`, width: `${width}px` }}>
-      <Content
-        style={{
-          scale: 1,
-          rotateX: springX,
-          rotateY: springY,
-        }}
-        whileHover={{
-          scale: 1.03,
-        }}
-        whileTap={{
-          scale: 0.97,
-        }}
-        onTapCancel={(e: any) => {
-          setTapped(false);
-          onMouseOver(e);
-        }}
-        onTapStart={() => {
-          setTapped(true);
-        }}
-        onTap={(e) => {
-          setTapped(false);
-        }}
-        onHoverStart={hoverStart}
-        onHoverEnd={hoverEnd}
-        onMouseMove={onMouseOver}
-      >
-        <RelativeContainer>{children}</RelativeContainer>
-        <Gradient
-          style={{
-            background: gradient,
-          }}
-        />
-      </Content>
-    </Container>
+    <>
+      {isMobile && children}
+      {!isMobile && (
+        <Container
+          ref={ref}
+          style={{ height: `${height}px`, width: `${width}px` }}
+        >
+          <Content
+            style={{
+              scale: 1,
+              rotateX: springX,
+              rotateY: springY,
+            }}
+            whileHover={{
+              scale: 1.03,
+            }}
+            whileTap={{
+              scale: 0.97,
+            }}
+            onTapCancel={(e: any) => {
+              setTapped(false);
+              onMouseOver(e);
+            }}
+            onTapStart={() => {
+              setTapped(true);
+            }}
+            onTap={(e) => {
+              setTapped(false);
+            }}
+            onHoverStart={hoverStart}
+            onHoverEnd={hoverEnd}
+            onMouseMove={onMouseOver}
+          >
+            <RelativeContainer>{children}</RelativeContainer>
+            <Gradient
+              style={{
+                background: gradient,
+              }}
+            />
+          </Content>
+        </Container>
+      )}
+    </>
   );
 }
