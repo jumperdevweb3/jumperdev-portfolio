@@ -16,6 +16,9 @@ module.exports = {
       },
       gridTemplateColumns: {
         cards: "repeat(auto-fill, 250px)",
+        "facts-lg": "repeat(auto-fill, 330px)",
+        "facts-md": "repeat(auto-fill, 300px)",
+        "facts-sm": "repeat(auto-fill, 250px)",
       },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",
@@ -56,6 +59,10 @@ module.exports = {
         shadows:
           "linear-gradient(to right,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0) 5%,rgba(0, 0, 0, 0) 95%,rgba(0, 0, 0, 1))",
         avatar: "url(/rocket.png)",
+        "purple-radial":
+          "radial-gradient(50% 50% at 50% 50%, #6f1b8ca1 0%, rgba(16, 14, 17, 0.14) 100%)",
+        linearPurpleBack:
+          "linear-gradient(230.52deg, #8F299F -35.11%, #1C151E 88.15%)",
       },
       fontFamily: {
         fira: "Fira Code, monospace",
@@ -95,6 +102,11 @@ module.exports = {
           "50%": { transform: "translateY(-4%)" },
           "100%": { transform: "translateY(0%)" },
         },
+        "levitation-reverse": {
+          "0%": { transform: "translateY(0%)" },
+          "50%": { transform: "translateY(6%)" },
+          "100%": { transform: "translateY(0%)" },
+        },
         fromLeft: {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(0%)" },
@@ -128,6 +140,8 @@ module.exports = {
         wave: "wave 10s -3s linear reverse infinite",
         levitation: "levitation 5s 1500ms linear reverse infinite",
         "levitation-sm": "levitation-sm 5s 1500ms linear reverse infinite",
+        "levitation-reverse":
+          "levitation-reverse 5s 1.5s 1500ms linear reverse infinite",
         fromLeft: "fromLeft 1s linear",
         fromRight: "fromRight 700ms linear",
         cardSkew: "cardSkew 10s linear reverse infinite",
