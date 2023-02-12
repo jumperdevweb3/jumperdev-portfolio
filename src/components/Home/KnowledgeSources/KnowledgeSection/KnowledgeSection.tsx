@@ -34,7 +34,7 @@ export const KnowledgeSection = ({
       ref={sectionRef}
     >
       <div
-        className={`flex flex-col text-center text-2xl ${textShadowColor} text-shadow-lg md:text-4xl`}
+        className={`flex flex-col text-center text-2xl ${textShadowColor} gap-2 text-shadow-lg md:text-4xl`}
         style={{
           transform: isInView ? "none" : "translateY(200px)",
           opacity: isInView ? 1 : 0,

@@ -1,11 +1,11 @@
-import { Header } from "@/Header/Header";
+import { Header } from "@/Layout/Header/Header";
 import { ReactNode } from "react";
 
 export const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header />
-      {children}
+      <main className="pt-4">{children}</main>
     </>
   );
 };

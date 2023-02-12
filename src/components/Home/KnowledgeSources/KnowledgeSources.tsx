@@ -16,7 +16,7 @@ export const KnowledgeSources = () => {
   return (
     <section
       className={
-        "relative flex min-h-[calc(calc(var(--vh)_*_100)_-_60px)] w-full flex-col items-center gap-[5.5rem] pt-10 pb-[5rem] font-poppins text-4xl font-bold"
+        "relative flex min-h-[calc(calc(var(--vh)_*_100)_-_108px)] w-full flex-col items-center gap-[5.5rem] pt-10 pb-[5rem] font-poppins text-4xl font-bold"
       }
     >
       <KnowledgeSection {...coursesProps} />

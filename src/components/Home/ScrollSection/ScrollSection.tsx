@@ -10,16 +10,14 @@ export const ScrollSection = () => {
     "TailwindCSS",
   ];
   const [offset, setOffset] = useState(0);
-  const promoSquareRef = useRef<HTMLDivElement>(null);
+  const skillSquareRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const countOfSquaresThatWillFitIntoViewport = window.innerWidth / 700;
-    const fullSquaresThatWillFit = Math.floor(
-      countOfSquaresThatWillFitIntoViewport
-    );
+    const squaresToFitIntoViewport = window.innerWidth / 700;
+    const fullSquaresToFit = Math.floor(squaresToFitIntoViewport);
     const offsetOfSquares =
-      ((countOfSquaresThatWillFitIntoViewport - fullSquaresThatWillFit) *
-        (promoSquareRef?.current?.offsetWidth || 700)) /
+      ((squaresToFitIntoViewport - fullSquaresToFit) *
+        (skillSquareRef?.current?.offsetWidth || 700)) /
       2;
     setOffset(offsetOfSquares);
   }, []);
@@ -29,7 +27,7 @@ export const ScrollSection = () => {
       <SideScroll offset={offset}>
         {cardsContent.map((text, index) => (
           <div
-            ref={promoSquareRef}
+            ref={skillSquareRef}
             key={index}
             className="before: grid h-[40vh] w-[700px] max-w-[80vw] skew-y-[0deg] animate-cardSkew place-items-center rounded-xl border-[3px] border-solid border-[#bbb] bg-cards-dark-purple bg-cover bg-no-repeat shadow-own-shadow shadow-scrolledItems"
           >

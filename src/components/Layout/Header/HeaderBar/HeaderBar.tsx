@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useWindowSize } from "src/hooks/use-windowSize";
-import { HamburgerButton } from "./HamburgerButton/HamburgerButton";
+import { HamburgerButton } from "../HamburgerButton/HamburgerButton";
 
 interface IProps {
   onClose: () => void;

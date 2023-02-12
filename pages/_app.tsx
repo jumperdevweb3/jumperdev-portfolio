@@ -1,6 +1,6 @@
 import "/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Layout } from "@/ui/Layout/Layout";
+import { Layout } from "@/Layout/Layout";
 import { useEffect } from "react";
 import { useWindowSize } from "src/hooks/use-windowSize";
 

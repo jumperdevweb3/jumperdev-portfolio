@@ -5,7 +5,7 @@ import { HomeBannerContent } from "./HomeBannerContent/HomeBannerContent";
 export const HomeBanner = () => {
   return (
     <div
-      className={`relative flex w-full flex-col items-center gap-16 overflow-x-hidden pt-4 pb-8 text-[#ddd] sm:min-h-[100vh] md:flex-row md:items-center md:justify-around md:px-6 md:pt-0 md:pb-14`}
+      className={`relative mt-4 mb-8 flex w-full flex-col items-center gap-16 overflow-x-hidden text-[#ddd] sm:min-h-[100vh] md:mt-0 md:mb-14 md:flex-row md:items-center md:justify-around md:px-6`}
     >
       <HomeBannerContent />
       <HomeBannerAvatar />
