@@ -42,12 +42,14 @@ module.exports = {
       backgroundColor: {
         "main-dark": "#100d0d",
         waves: "rgba(141, 46, 170, 0.25)",
+        // header: "rgb(57 39 95)",
       },
       colors: {
         "c-purple": "#C778DD",
         "c-gray": "#ABB2BF",
         "light-red": "rgb(212 49 49 / 45%)",
         "light-blue": "rgb(36 105 237 / 56%)",
+        textGray: "#A3b3bc",
       },
       backgroundImage: {
         "avatar-gradient": "linear-gradient(to right, #9d50bb, #6e48aa)",
@@ -60,14 +62,21 @@ module.exports = {
           "linear-gradient(to right,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0) 5%,rgba(0, 0, 0, 0) 95%,rgba(0, 0, 0, 1))",
         avatar: "url(/rocket.png)",
         "purple-radial":
-          "radial-gradient(50% 50% at 50% 50%, #6f1b8ca1 0%, rgba(16, 14, 17, 0.14) 100%)",
+          "radial-gradient(50% 50% at 50% 50%, #501b8ca1 0%, rgba(16, 14, 17, 0.14) 100%)",
         linearPurpleBack:
-          "linear-gradient(230.52deg, #8F299F -35.11%, #1C151E 88.15%)",
+          "linear-gradient(230.52deg, #67299f -35.11%, #1C151E 88.15%)",
+        linearDarkPurple:
+          "linear-gradient(198.22deg, #0A0A0A 23.72%, #30143A 69.75%, #0A0A0A 107.1%)",
+        linearTextDark:
+          "linear-gradient(90deg, #9627ED 47.23%, #9C1A8F 87.48%)",
+        // header: "linear-gradient(to right, #2e154a, #8248aa)",
+        header: "linear-gradient(to right, #2e154a, #4c0779)",
       },
       fontFamily: {
         fira: "Fira Code, monospace",
         inter: "Inter, sans-serif",
         poppins: "Poppins, sans-serif",
+        "open-sans": "'Open Sans', sans-serif",
       },
       boxShadow: {
         "own-shadow":
@@ -134,6 +143,10 @@ module.exports = {
             borderRadius: "100% 60% 60% 100% / 100% 100% 60% 60%",
           },
         },
+        rotateFull: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         wiggle: "wiggle 2s ease-in-out infinite",
@@ -147,6 +160,7 @@ module.exports = {
         cardSkew: "cardSkew 10s linear reverse infinite",
         cardSkewLow: "cardSkewLow 10s linear reverse infinite",
         blob: "blob 3s linear infinite",
+        rotateFull: "rotateFull 13s linear infinite",
       },
     },
   },
