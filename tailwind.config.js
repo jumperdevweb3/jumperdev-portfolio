@@ -16,7 +16,6 @@ module.exports = {
       },
       gridTemplateColumns: {
         cards: "repeat(auto-fill, 250px)",
-        "facts-lg": "repeat(auto-fill, 330px)",
         "facts-md": "repeat(auto-fill, 300px)",
         "facts-sm": "repeat(auto-fill, 250px)",
       },

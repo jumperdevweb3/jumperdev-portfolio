@@ -5,7 +5,7 @@ export const CardsSlider = ({ children }: { children: ReactNode }) => {
   const sliderBoxRef = useRef<HTMLDivElement>(null);
 
   const scrollHandler = (direction: "left" | "right") => {
-    const width = 300;
+    const width = 313;
     if (typeof width !== "undefined" && sliderBoxRef.current !== null) {
       const scrollIncrease = sliderBoxRef.current.scrollLeft + width;
       const scrollDecrease = sliderBoxRef.current.scrollLeft - width;
@@ -18,7 +18,7 @@ export const CardsSlider = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <div
-        className={`relative flex h-[350px] w-[350px] items-center gap-12 overflow-x-hidden scroll-smooth px-8`}
+        className={`relative flex h-[315px] w-[265px] gap-12 overflow-x-hidden scroll-smooth`}
         ref={sliderBoxRef}
       >
         {children}

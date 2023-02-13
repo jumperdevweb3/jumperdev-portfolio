@@ -27,10 +27,13 @@ export const FactsList = () => {
   });
 
   return (
-    <div className="relative flex w-full justify-center" ref={factsBoxRef}>
+    <div
+      className="relative flex w-full max-w-[95%] justify-center"
+      ref={factsBoxRef}
+    >
       {mobile && <CardsSlider>{factsListRender}</CardsSlider>}
       {!mobile && (
-        <div className="md:min-h-auto grid w-full shrink-0 grid-cols-facts-sm items-center justify-center gap-12 px-4 text-base font-bold md:grid-cols-facts-md md:gap-14 lg:grid-cols-facts-lg">
+        <div className="flex shrink-0 items-center justify-center gap-12 px-4 text-base font-bold md:gap-14">
           {factsListRender}
         </div>
       )}
