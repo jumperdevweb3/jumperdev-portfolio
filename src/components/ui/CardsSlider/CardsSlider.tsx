@@ -1,8 +1,10 @@
+import { useInView } from "framer-motion";
 import { ReactNode, useRef } from "react";
 import { SliderButtons } from "./SliderButtons/SliderButtons";
 
 export const CardsSlider = ({ children }: { children: ReactNode }) => {
   const sliderBoxRef = useRef<HTMLDivElement>(null);
+  const isSiderInView = useInView(sliderBoxRef, { once: true });
 
   const scrollHandler = (direction: "left" | "right") => {
     const width = 313;
@@ -20,6 +22,11 @@ export const CardsSlider = ({ children }: { children: ReactNode }) => {
       <div
         className={`relative flex h-[315px] w-[265px] gap-12 overflow-x-hidden scroll-smooth`}
         ref={sliderBoxRef}
+        style={{
+          transform: isSiderInView ? "none" : `translateX(200px)`,
+          opacity: isSiderInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+        }}
       >
         {children}
       </div>
