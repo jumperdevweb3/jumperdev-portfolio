@@ -33,7 +33,7 @@ export const FactsList = () => {
     >
       {mobile && <CardsSlider>{factsListRender}</CardsSlider>}
       {!mobile && (
-        <div className="flex shrink-0 items-center justify-center gap-12 px-4 text-base font-bold md:gap-14">
+        <div className="flex flex-wrap items-center justify-center gap-12 px-4 text-base font-bold md:gap-14">
           {factsListRender}
         </div>
       )}

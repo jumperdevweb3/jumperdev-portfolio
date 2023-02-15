@@ -69,7 +69,7 @@ module.exports = {
         linearTextDark:
           "linear-gradient(90deg, #9627ED 47.23%, #9C1A8F 87.48%)",
         // header: "linear-gradient(to right, #2e154a, #8248aa)",
-        header: "linear-gradient(to right, #2e154a, #4c0779)",
+        header: "linear-gradient(to right, #3a154a, #66098129)",
       },
       fontFamily: {
         fira: "Fira Code, monospace",

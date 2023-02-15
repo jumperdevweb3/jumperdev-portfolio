@@ -9,7 +9,7 @@ interface IProps {
 export const FactCard = ({ animations, item }: IProps) => {
   return (
     <div
-      className="relative ml-[15px] h-[300px] w-[250px] shrink-0 border-[1px]"
+      className="relative ml-[15px] h-[270px] w-[250px] shrink-0 border-[1px]"
       style={animations}
     >
       <div

@@ -9,9 +9,4 @@ export const navLinks = [
     name: "About me",
     url: "/about",
   },
-  {
-    id: 2,
-    name: "Contact",
-    url: "/contact",
-  },
 ];
