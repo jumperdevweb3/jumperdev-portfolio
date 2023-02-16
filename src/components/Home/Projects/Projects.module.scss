@@ -14,7 +14,6 @@
     border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
     max-width: 650px;
 
@@ -52,6 +51,7 @@
       padding: 1rem 2rem;
       background: transparent;
       text-align: center;
+      height: 100%;
 
       @media (min-width: 1024px) {
         // position: absolute;
@@ -68,23 +68,26 @@
         border: 2px solid rgb(255, 255, 255, 0.7);
         border-radius: 15px;
         width: 45%;
+        height: auto;
       }
 
       .text-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 0.7rem;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        height: 100%;
         .title {
           font-size: 1.5rem;
           font-weight: bold;
           background: linear-gradient(
             270deg,
-            #fa07ff -8.43%,
-            #f508b2 22.13%,
-            #f0096a 50.88%,
-            rgba(232, 9, 236, 0.63) 73.65%,
-            rgba(160, 9, 252, 0.825091) 91.02%,
-            #7310f0 106.6%
+            #f04a68 -8.43%,
+            #f23be0 23.92%,
+            #cc2bf5 51.48%,
+            #b11cf7 77.24%,
+            #bc12f8 106.6%
           );
           background-clip: text;
           color: transparent;
@@ -94,7 +97,8 @@
           font-weight: bold;
         }
         .stack {
-          font-size: 1rem;
+          display: flex;
+          gap: 1rem;
         }
         .description {
           font-size: 0.9rem;
