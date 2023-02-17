@@ -1,6 +1,4 @@
 .section {
-  width: 100%;
-  height: auto;
   padding: 2rem 1rem;
   display: flex;
   justify-content: center;
@@ -48,16 +46,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem 2rem;
+      padding: 0.5rem 1rem;
       background: transparent;
       text-align: center;
       height: 100%;
 
       @media (min-width: 1024px) {
-        // position: absolute;
-        // top: 50%;
-        // left: 30%;
-        // transform: translate(-50%, -50%);
+        padding: 1rem 2rem;
         transform: translate(40%);
         background: linear-gradient(
           90deg,
@@ -74,7 +69,7 @@
       .text-wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         gap: 1rem;
         height: 100%;
@@ -98,11 +93,23 @@
         }
         .stack {
           display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
           gap: 1rem;
+
+          span {
+            padding: 0.3rem 1rem;
+            background-color: #bc12f8;
+            border-radius: 15px;
+            font-size: 0.8rem;
+          }
         }
         .description {
           font-size: 0.9rem;
           color: rgb(255, 255, 255, 0.78);
+        }
+        @media (min-width: 768px) {
+          gap: 2.5rem;
         }
       }
     }
