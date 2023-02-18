@@ -7,7 +7,7 @@ export const Home = () => {
   return (
     <>
       <HomeBanner />
-      {/* <ScrollSection /> */}
+      <ScrollSection />
       <Projects />
       <KnowledgeSources />
     </>
