@@ -36,9 +36,9 @@ export const KnowledgeSection = ({
       <div
         className={`flex flex-col text-center text-2xl ${textShadowColor} gap-2 text-shadow-lg md:text-4xl`}
         style={{
-          transform: isInView ? "none" : "translateY(200px)",
+          transform: isInView ? "none" : "translateX(200px)",
           opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
         }}
       >
         <h3 className="text-center ">{title}</h3>

@@ -3,7 +3,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-export const SocialList = () => {
+export const SocialList = ({ styles }: { styles?: {} }) => {
   const iconConfig = {
     fill: "#fff",
     fontSize: 24,
@@ -22,7 +22,7 @@ export const SocialList = () => {
     {
       id: 2,
       icon: <FaDiscord {...iconConfig} />,
-      url: "/",
+      url: "https://discord.gg/jheUCreBEj",
     },
     {
       id: 3,

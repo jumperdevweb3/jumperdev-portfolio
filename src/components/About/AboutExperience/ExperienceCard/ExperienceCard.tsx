@@ -20,7 +20,7 @@ export const ExperienceCard = () => {
       style={{
         transform: isCardInView ? "none" : "translateX(200px)",
         opacity: isCardInView ? 1 : 0,
-        transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1) 1.2s",
+        transition: "all .7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
       }}
     >
       <div className="flex flex-col items-center gap-4 text-center">

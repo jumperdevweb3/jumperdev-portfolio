@@ -22,7 +22,7 @@ export const KnowledgeCard = ({ item, cardColors }: IProps) => {
     </h4>
   );
   return (
-    <Link key={item.id} href={item.url}>
+    <Link key={item.id} href={item.url} target="_blank">
       <InteractiveCardWrapper
         height={cardRef.current?.offsetHeight}
         width={cardRef.current?.offsetWidth}

@@ -77,7 +77,7 @@ export const SideScroll = ({
         <motion.section
           style={{ x: spring }}
           className={
-            "relative top-0 flex h-[calc(var(--vh)_*_100)] w-max items-center gap-4"
+            "relative top-0 flex h-[calc(var(--vh)_*_100)] w-max items-center gap-8"
           }
           ref={scrollingContentRef}
         >

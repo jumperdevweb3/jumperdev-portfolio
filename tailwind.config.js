@@ -16,7 +16,6 @@ module.exports = {
       },
       gridTemplateColumns: {
         cards: "repeat(auto-fill, 250px)",
-        "facts-lg": "repeat(auto-fill, 330px)",
         "facts-md": "repeat(auto-fill, 300px)",
         "facts-sm": "repeat(auto-fill, 250px)",
       },
@@ -70,7 +69,11 @@ module.exports = {
         linearTextDark:
           "linear-gradient(90deg, #9627ED 47.23%, #9C1A8F 87.48%)",
         // header: "linear-gradient(to right, #2e154a, #8248aa)",
-        header: "linear-gradient(to right, #2e154a, #4c0779)",
+        header: "linear-gradient(to right, #3a154a, #66098129)",
+        "project-card":
+          "linear-gradient(90deg,rgba(63, 28, 84, 0.4) 0%,rgba(56, 9, 85, 0.5) 100%)",
+        lightGradient:
+          "linear-gradient(270deg,#f04a68 -8.43%,#f23be0 23.92%,#cc2bf5 51.48%,#b11cf7 77.24%,#bc12f8 106.6%)",
       },
       fontFamily: {
         fira: "Fira Code, monospace",
