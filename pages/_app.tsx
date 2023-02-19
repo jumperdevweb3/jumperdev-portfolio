@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       {/* Google tag (gtag.js)  */}
-      <Script
+      {/* <Script
         async
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-8VX61DV22P"
@@ -36,6 +36,20 @@ export default function App({ Component, pageProps }: AppProps) {
         `,
         }}
       ></Script>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-8VX61DV22P`}
+      /> */}
+
+      <Script strategy="lazyOnload" id="google-analytics">
+        {`
+                window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-8VX61DV22P');
+      `}
+      </Script>
       <Layout>
         <Component {...pageProps} />
       </Layout>
