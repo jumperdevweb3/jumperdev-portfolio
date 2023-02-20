@@ -15,41 +15,28 @@ export default function App({ Component, pageProps }: AppProps) {
       );
     }
   }, [width, height]);
-  return (
-    <>
-      {/* Google tag (gtag.js)  */}
-      {/* <Script
-        async
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-8VX61DV22P"
-      ></Script>
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-          window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-8VX61DV22P');
-        `,
-        }}
-      ></Script>
+  const GoogleAnalitycs = () => (
+    <>
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=G-8VX61DV22P`}
-      /> */}
+      />
 
-      <Script strategy="lazyOnload" id="google-analytics">
+      <Script id="g-script" strategy="lazyOnload">
         {`
-                window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-      
-        gtag('config', 'G-8VX61DV22P');
-      `}
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+                      gtag('config', 'G-8VX61DV22P');
+                      page_path: window.location.pathname,
+                  `}
       </Script>
+    </>
+  );
+  return (
+    <>
+      <GoogleAnalitycs />
       <Layout>
         <Component {...pageProps} />
       </Layout>
