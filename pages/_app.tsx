@@ -29,7 +29,6 @@ export default function App({ Component, pageProps }: AppProps) {
                       function gtag(){dataLayer.push(arguments);}
                       gtag('js', new Date());
                       gtag('config', 'G-8VX61DV22P');
-                      page_path: window.location.pathname,
                   `}
       </Script>
     </>
