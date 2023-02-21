@@ -16,26 +16,28 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [width, height]);
 
-  // const GoogleAnalitycs = () => (
-  //   <>
-  //     <Script
-  //       strategy="lazyOnload"
-  //       src={`https://www.googletagmanager.com/gtag/js?id=G-8VX61DV22P`}
-  //     />
+  const GoogleAnalitycs = () => (
+    <>
+      <Script
+        async
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-8VX61DV22P`}
+      />
 
-  //     <Script id="g-script" strategy="afterInteractive">
-  //       {`
-  //         window.dataLayer = window.dataLayer || [];
-  //         function gtag(){dataLayer.push(arguments);}
-  //         gtag('js', new Date());
-  //         gtag('config', 'G-8VX61DV22P');
-  //       `}
-  //     </Script>
-  //   </>
-  // );
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8VX61DV22P');
+        `}
+      </Script>
+    </>
+  );
   return (
     <>
-      {/* <GoogleAnalitycs /> */}
+      <GoogleAnalitycs />
+
       <Script strategy="afterInteractive" id="google-tag-manager">
         {`
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

@@ -5,20 +5,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <Script
-          async
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-8VX61DV22P`}
-        />
-
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-8VX61DV22P');
-        `}
-        </Script>
         <meta
           name="google-site-verification"
           content="gMU-2OIHk2cm2agH6XKONEgfiXvEO-6iS7QjLDs3mA8"
