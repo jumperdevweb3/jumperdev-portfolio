@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
@@ -8,7 +9,6 @@ export default function Document() {
           name="google-site-verification"
           content="gMU-2OIHk2cm2agH6XKONEgfiXvEO-6iS7QjLDs3mA8"
         />
-
         <link
           rel="apple-touch-icon"
           href="https://jumperweb3.dev/apple-touch-icon.png"
@@ -46,6 +46,11 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5WZ269" height="0" width="0" style="display: none; visibility: hidden;" />`,
+          }}
+        />
       </body>
     </Html>
   );
