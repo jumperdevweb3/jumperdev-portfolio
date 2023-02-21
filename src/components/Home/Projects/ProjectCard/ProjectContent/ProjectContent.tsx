@@ -15,11 +15,11 @@ export const ProjectContent = ({
 }: IProps) => {
   return (
     <div className="flex h-full flex-col items-center justify-center gap-[1rem] md:gap-[2.5rem]">
-      <h2 className="bg-lightGradient bg-clip-text text-[1.5rem] font-bold text-transparent">
+      <h3 className="bg-lightGradient bg-clip-text text-[1.5rem] font-bold text-transparent">
         {name}
-      </h2>
+      </h3>
       <div className="flex flex-col gap-4">
-        <h3 className="text-[1.2rem] font-bold">Tech Stack 🛠️</h3>
+        <h4 className="text-[1.2rem] font-bold">Tech Stack 🛠️</h4>
         <TechStack stackArr={techStack} />
       </div>
       <p className="text-sm text-[rgb(255,255,255,0.7)]">{description}</p>

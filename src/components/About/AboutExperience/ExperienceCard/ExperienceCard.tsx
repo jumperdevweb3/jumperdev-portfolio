@@ -24,14 +24,14 @@ export const ExperienceCard = () => {
       }}
     >
       <div className="flex flex-col items-center gap-4 text-center">
-        <h2 className="text-2xl font-bold md:text-4xl">
+        <h3 className="text-2xl font-bold md:text-4xl">
           Frontend{" "}
           <span className="bg-linearTextDark bg-clip-text text-transparent">
             Developer
           </span>
-        </h2>
+        </h3>
         <span className="font-open-sans text-2xl font-light">6 months</span>
-        {/* <p className="font-bold">company.name</p> */}
+        {/* <h4 className="font-bold">company.name</h4> */}
         <div className="flex flex-wrap justify-center gap-4 p-4 md:gap-6">
           {stackIcons.map((item) => (
             <div key={item.id} className="h-[46px] w-[46px]">
