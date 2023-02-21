@@ -25,11 +25,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <Script id="g-script" strategy="lazyOnload">
         {`
-                      window.dataLayer = window.dataLayer || [];
-                      function gtag(){dataLayer.push(arguments);}
-                      gtag('js', new Date());
-                      gtag('config', 'G-8VX61DV22P');
-                  `}
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8VX61DV22P');
+        `}
       </Script>
     </>
   );
