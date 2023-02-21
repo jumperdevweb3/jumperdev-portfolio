@@ -4,7 +4,7 @@ export const coursesList = [
     name: "React",
     description: "The Complete Guide (incl Hooks, React Router, Redux)",
     author: "Maximilian Schwarzmüller",
-    image: "/reactjs-course.jpg",
+    image: "/img/home/courses/reactjs-course.jpg",
     url: "/",
   },
   {
@@ -12,7 +12,7 @@ export const coursesList = [
     name: "Next.js",
     description: "The Complete Guide (incl. Two Paths!)",
     author: "Maximilian Schwarzmüller",
-    image: "/nextjs-course.jpg",
+    image: "/img/home/courses/nextjs-course.jpg",
     url: "/",
   },
   {
@@ -20,7 +20,7 @@ export const coursesList = [
     name: "Understanding TypeScript ",
     description: "2022 Edition",
     author: "Maximilian Schwarzmüller",
-    image: "/typescript-course.jpg",
+    image: "/img/home/courses/typescript-course.jpg",
     url: "/",
   },
 ];
@@ -32,7 +32,7 @@ export const youtubeChannels = [
     description:
       "Frontend videos from basic to very advanced; tutorials, technology deep dives. ",
     url: "https://www.youtube.com/@jherr",
-    image: "/jack-herrington.png",
+    image: "/img/home/knowledge/jack-herrington.png",
   },
   {
     id: 1,
@@ -40,7 +40,7 @@ export const youtubeChannels = [
     description:
       "High-intensity ⚡ code tutorials to help you build & ship your app faster.",
     url: "https://www.youtube.com/@Fireship",
-    image: "/fireship.png",
+    image: "/img/home/knowledge/fireship.png",
   },
   {
     id: 2,
@@ -48,7 +48,7 @@ export const youtubeChannels = [
     description:
       "CoderOne is a Learning Channel For Web Development, Software Enginnering and Coding All in one place with a High quality Video/Written Tutorials.",
     url: "https://www.youtube.com/@CoderOne",
-    image: "/coder-one.png",
+    image: "/img/home/knowledge/coder-one.png",
   },
   {
     id: 3,
@@ -56,6 +56,6 @@ export const youtubeChannels = [
     description:
       "Web Dev Simplified is all about teaching web development skills and techniques in an efficient and practical manner.",
     url: "https://www.youtube.com/@WebDevSimplified",
-    image: "/web-dev-simplified.png",
+    image: "/img/home/knowledge/web-dev-simplified.png",
   },
 ];

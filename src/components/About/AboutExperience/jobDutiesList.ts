@@ -28,34 +28,34 @@ export const firstJobDuties = [
 export const stackIcons = [
   {
     id: 0,
-    src: "/React.png",
+    src: "/img/icons/React.png",
   },
   {
     id: 1,
-    src: "/Javascript.png",
+    src: "/img/icons/Javascript.png",
   },
   {
     id: 2,
-    src: "/TypeScript.png",
+    src: "/img/icons/TypeScript.png",
   },
   {
     id: 3,
-    src: "/Nextjs.png",
+    src: "/img/icons/Nextjs.png",
   },
   {
     id: 4,
-    src: "/sass.png",
+    src: "/img/icons/sass.png",
   },
   {
     id: 5,
-    src: "/TailwindCSS.png",
+    src: "/img/icons/TailwindCSS.png",
   },
   {
     id: 6,
-    src: "/git.png",
+    src: "/img/icons/git.png",
   },
   {
     id: 7,
-    src: "/Figma.png",
+    src: "/img/icons/Figma.png",
   },
 ];

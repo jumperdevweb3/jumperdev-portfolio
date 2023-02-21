@@ -17,7 +17,7 @@ export const BlobAvatar = () => {
       <div className="flex items-center justify-center">
         <div className="h-[200px] w-[200px] animate-blob  overflow-hidden rounded-bubble border-[3px] border-solid border-white bg-linearPurpleBack lg:h-[300px] lg:w-[300px]">
           <Image
-            src="/memoji.png"
+            src="/img/memoji.png"
             alt="asd"
             width={300}
             height={300}

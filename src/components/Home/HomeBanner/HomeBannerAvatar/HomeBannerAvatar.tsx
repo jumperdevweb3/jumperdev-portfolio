@@ -22,7 +22,7 @@ export const HomeBannerAvatar = () => {
     >
       <div className="flex animate-levitation flex-col items-center gap-6 md:min-h-[300px] md:min-w-[300px]">
         <Image
-          src={"/cuted-memoji.png"}
+          src={"/img/home/cuted-memoji.png"}
           className="duration-400 h-[300px] w-[300px] rounded-[50%] bg-avatar-gradient object-contain shadow-own-shadow shadow-pink transition-all hover:shadow-avatar-hover 2xl:h-[350px] 2xl:w-[350px] sm-mob:h-[250px] sm-mob:w-[250px] "
           width={300}
           height={300}

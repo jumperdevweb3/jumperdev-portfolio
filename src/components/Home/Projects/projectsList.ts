@@ -13,5 +13,8 @@ export const cryptoTrackerApp = {
       "React Query",
     ],
   },
-  images: ["/cryptotracker1.png", "/cryptotracker2.png"],
+  images: [
+    "/img/home/projects/cryptotracker1.png",
+    "/img/home/projects/cryptotracker2.png",
+  ],
 };
