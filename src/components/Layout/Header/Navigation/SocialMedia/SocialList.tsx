@@ -27,7 +27,7 @@ export const SocialList = ({ styles }: { styles?: {} }) => {
     {
       id: 3,
       icon: <MdEmail {...iconConfig} />,
-      url: "mailto:jumper@dev.com",
+      url: "mailto:jumperweb3dev@gmail.com",
     },
   ];
 
