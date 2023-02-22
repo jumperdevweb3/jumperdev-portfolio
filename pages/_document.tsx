@@ -13,6 +13,7 @@ export default function Document() {
           rel="apple-touch-icon"
           href="https://jumperweb3.dev/apple-touch-icon.png"
         />
+        <link rel="manifest" href="/manifest.json" />
         <meta name="title" content="jumperweb3.dev" />
         <meta
           name="description"
