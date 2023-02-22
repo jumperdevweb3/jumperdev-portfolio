@@ -13,7 +13,9 @@ export default function Document() {
           rel="apple-touch-icon"
           href="https://jumperweb3.dev/apple-touch-icon.png"
         />
+        <meta name="apple-mobile-web-app-status-bar" content="#a690f4" />
         <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#100d0d" />
         <meta name="title" content="jumperweb3.dev" />
         <meta
           name="description"
