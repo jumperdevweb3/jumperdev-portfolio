@@ -13,6 +13,7 @@ module.exports = {
       screens: {
         "sm-mob": { raw: "(max-height: 700px) and (min-width: 250px)" },
         "l-desktop": { raw: "(min-width: 1920px)" },
+        "very-small": { raw: "(max-width: 350px)" },
       },
       gridTemplateColumns: {
         cards: "repeat(auto-fill, 250px)",
