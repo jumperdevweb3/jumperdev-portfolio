@@ -5,7 +5,7 @@ export const coursesList = [
     description: "The Complete Guide (incl Hooks, React Router, Redux)",
     author: "Maximilian Schwarzmüller",
     image: "/img/home/courses/reactjs-course.jpg",
-    url: "/",
+    url: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const coursesList = [
     description: "The Complete Guide (incl. Two Paths!)",
     author: "Maximilian Schwarzmüller",
     image: "/img/home/courses/nextjs-course.jpg",
-    url: "/",
+    url: "https://www.udemy.com/course/nextjs-react-the-complete-guide/",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const coursesList = [
     description: "2022 Edition",
     author: "Maximilian Schwarzmüller",
     image: "/img/home/courses/typescript-course.jpg",
-    url: "/",
+    url: "https://www.udemy.com/course/understanding-typescript/",
   },
 ];
 

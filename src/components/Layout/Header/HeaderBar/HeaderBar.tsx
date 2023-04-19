@@ -1,40 +1,16 @@
 import Link from "next/link";
-import { useWindowSize } from "src/hooks/use-windowSize";
-import { HamburgerButton } from "../HamburgerButton/HamburgerButton";
 
-interface IProps {
-  onClose: () => void;
-  onToggle: () => void;
-  isNavOpen: boolean;
-}
-export const HeaderBar = ({ onClose, onToggle, isNavOpen }: IProps) => {
-  const { width } = useWindowSize();
-  const mobile = width <= 767 && width !== 0;
-  const hamburgerProps = {
-    color: "#fefefe",
-    size: 24,
-    isOpen: isNavOpen,
-    onClick: onToggle,
-  };
+export const HeaderBar = () => {
   return (
-    <div className="flex w-full justify-between  p-4 md:w-auto">
+    <div className="flex w-auto justify-center md:w-auto md:p-4">
       <h1
-        className={`text-base font-bold tracking-[0.2em] md:text-lg`}
-        onClick={onClose}
+        className={`animate-wiggle text-base font-bold tracking-[0.2em] md:text-lg`}
       >
         <Link href={"/"}>
-          {" "}
           Jumper
-          <span
-            className={`text-xl text-c-purple ${
-              isNavOpen && "animate-bounce"
-            } inline-block`}
-          >
-            Dev
-          </span>
+          <span className={`inline-block text-xl text-c-purple`}>Dev</span>
         </Link>
       </h1>
-      {mobile && <HamburgerButton {...hamburgerProps} />}
     </div>
   );
 };
