@@ -68,9 +68,7 @@ export default function RootLayout({
       <GoogleTagManager gtmId='GTM-W5WZ269'/>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://your-domain.com" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://jumperweb3.dev" />
       </head>
       <body className={inter.className}>
         <ThemeProvider

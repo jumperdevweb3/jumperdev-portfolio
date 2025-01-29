@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 
+export const dynamic = 'force-static'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://jumperweb3.dev'
 
@@ -11,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/#about`,
+      url: `${baseUrl}/#about-content`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
