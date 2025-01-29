@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -66,6 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId='GTM-W5WZ269'/>
+      <GoogleAnalytics gaId='G-8VX61DV22P'/>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://jumperweb3.dev" />
