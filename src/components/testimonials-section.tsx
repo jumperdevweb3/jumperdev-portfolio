@@ -132,15 +132,14 @@ export function TestimonialsSection() {
           </div>
 
           {/* Swipe Instruction */}
-          {/* <motion.p
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
             className="text-sm text-muted-foreground mt-16"
           >
             Swipe or drag to see more testimonials
-          </motion.p> */}
-          {/* TODO: Uncomment this when there will be more testimonials */}
+          </motion.p>
         </motion.div>
       </div>
     </section>
