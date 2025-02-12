@@ -1,4 +1,4 @@
-export const experiencesContent = [
+export const experiencesContent: IExperience[] = [
   {
     title: "Full-stack Web3 Developer",
     company: "Blessed",

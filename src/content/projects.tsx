@@ -2,7 +2,7 @@ import { Ticket } from 'lucide-react';
 
 import { MessageCircle } from 'lucide-react';
 
-export const projectsContent = [
+export const projectsContent: IProject[] = [
   {
     title: "Alphagram",
     subtitle: "Web3 Telegram Channel Monetization Platform",

@@ -22,6 +22,9 @@ export const useSmoothScroll = () => {
         top: offsetPosition,
         behavior: "smooth"
       })
+
+      // Update URL hash after scrolling without causing a jump
+      window.history.pushState(null, '', `#${id}`)
     }
   }, [])
 

@@ -7,10 +7,10 @@ import {
   Layout,
   Server,
   Shield,
-  Workflow,
+  Workflow
 } from "lucide-react"
 
-export const technologiesContent = [
+export const technologiesContent: ITechnology[] = [
   {
     icon: Layout,
     name: "Frontend Development",
