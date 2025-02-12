@@ -62,7 +62,7 @@ export default function NotFound() {
               className='flex flex-col gap-4 max-w-sm mx-auto'
             >
               <Button asChild size="lg" className="text-lg">
-                <Link href="/">
+                <Link href="/" aria-label="Back to Homepage">
                   <Home className="mr-2 h-5 w-5" />
                   Back to Homepage
                 </Link>
@@ -73,7 +73,7 @@ export default function NotFound() {
                 className="text-base md:text-lg w-full sm:w-auto px-6 md:px-8 download-button group"
                 asChild
               >
-                <a href="/resume.pdf" download="Filip_Namysł_CV.pdf">
+                <a href="/resume.pdf" download="Filip_Namysł_CV.pdf" aria-label="Download Resume">
                   <Download className="mr-2 h-4 w-4 md:h-5 md:w-5 download-icon" />
                   <span className="relative z-10">Download Resume</span>
                 </a>

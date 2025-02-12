@@ -21,7 +21,7 @@ export function ThemeToggle() {
   }, [])
 
   if (!mounted) {
-    return <Button variant="ghost" size="icon" className="w-10 h-10" />
+    return <Button variant="ghost" size="icon" className="w-10 h-10" aria-label="Toggle Theme" />
   }
 
   const toggleTheme = () => {
@@ -36,6 +36,7 @@ export function ThemeToggle() {
       size="icon"
       onClick={toggleTheme}
       className="theme-toggle-container relative w-10 h-10"
+      aria-label="Toggle Theme"
     >
       <motion.div
         initial={false}
