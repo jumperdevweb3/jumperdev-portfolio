@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { Code2, Download, Home, Search } from "lucide-react"
+import { Code2, Home, Search } from "lucide-react"
 import Link from "next/link"
 
 export default function NotFound() {
@@ -58,27 +58,12 @@ export default function NotFound() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <div
-              className='flex flex-col gap-4 max-w-sm mx-auto'
-            >
-              <Button asChild size="lg" className="text-lg">
-                <Link href="/" aria-label="Back to Homepage">
-                  <Home className="mr-2 h-5 w-5" />
-                  Back to Homepage
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-base md:text-lg w-full sm:w-auto px-6 md:px-8 download-button group"
-                asChild
-              >
-                <a href="/resume.pdf" download="Filip_Namysł_CV.pdf" aria-label="Download Resume">
-                  <Download className="mr-2 h-4 w-4 md:h-5 md:w-5 download-icon" />
-                  <span className="relative z-10">Download Resume</span>
-                </a>
-              </Button>
-            </div>
+            <Button asChild size="lg" className="text-lg">
+              <Link href="/" aria-label="Back to Homepage">
+                <Home className="mr-2 h-5 w-5" />
+                Back to Homepage
+              </Link>
+            </Button>
           </motion.div>
         </motion.div>
       </div>
